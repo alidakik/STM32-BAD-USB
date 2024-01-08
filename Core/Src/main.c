@@ -105,17 +105,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-
+  	  HAL_Delay(5000);
 	  keyboardhid.MODIFIER = 0x08;
 	  keyboardhid.KEYCODE1 = 0x15;
       USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press GIU
@@ -356,13 +346,23 @@ int main(void)
       HAL_Delay(50);
       keyboardhid.KEYCODE1 = 0x00;    //release <Enter>
       USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
 
 
       HAL_Delay(1000);
-      //break;
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+      HAL_Delay(1000);
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
   }
+
   /* USER CODE END 3 */
 }
 

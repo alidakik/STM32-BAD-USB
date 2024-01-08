@@ -70,8 +70,8 @@ all: main-build
 main-build: BAD-USB.elf secondary-outputs
 
 # Tool invocations
-BAD-USB.elf BAD-USB.map: $(OBJS) $(USER_OBJS) C:\Users\alida\STM32CubeIDE\workspace_1.9.0\BAD-USB\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "BAD-USB.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\alida\STM32CubeIDE\workspace_1.9.0\BAD-USB\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAD-USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+BAD-USB.elf BAD-USB.map: $(OBJS) $(USER_OBJS) E:\Uni\term5\Riz\STM32-BAD-USB\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "BAD-USB.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\Uni\term5\Riz\STM32-BAD-USB\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BAD-USB.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
