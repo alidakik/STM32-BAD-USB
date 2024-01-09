@@ -88,7 +88,7 @@ for i in range(len(script)):
         if(script[i][j].isupper()):
             print("\tkeyboardhid.MODIFIER = 0x00;\n")
 
-        print("\tUSBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));\n\tHAL_DELAY(50);\n")
+        print("\tUSBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));\n\tHAL_Delay(50);\n")
 
     print("\tkeyboardhid.KEYCODE1 = 0x2C;\n\tUSBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));\t//press <SPACE>\n\tHAL_Delay(50);\n\tkeyboardhid.KEYCODE1 = 0x00;\t\t\t\t//release <SPACE>\n\tUSBD_HID_SendReport(&hUsbDeviceFS,&keyboardhid,sizeof(keyboardhid));\n")
 
