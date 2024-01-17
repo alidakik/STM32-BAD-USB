@@ -1,6 +1,6 @@
 # STM32-BAD-USB
 
-STM32-BAD-USB is a DIY USB [rubber ducky](https://shop.hak5.org/products/usb-rubber-ducky) implementation using an STM32 microcontroller.
+STM32-BAD-USB is a DIY USB [rubber ducky](https://shop.hak5.org/products/usb-rubber-ducky) implementation using an STM32 microcontroller.This project was developed as part of our microcontroller course during the Winter-Fall semester of 2023 at Isfahan University of Technology. It was created and developed by [Yasin](https://github.com/Orgonah) and [me:)](https://github.com/alidakik).
 
 ## Overview
 
