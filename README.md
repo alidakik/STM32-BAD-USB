@@ -17,3 +17,7 @@ The chip presents itself as a keyboard upon connection via the USB port, executi
 
 - stm32F103C8 (We used the Blue Pill board)
 
+
+
+
+![Example GIF](https://github.com/alidakik/STM32-BAD-USB/blob/main/example.gif)
