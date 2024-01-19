@@ -24,3 +24,11 @@ The chip presents itself as a keyboard upon connection via the USB port, executi
 ## Demo
 
 ![Example GIF](https://github.com/alidakik/STM32-BAD-USB/blob/main/example.gif)
+
+
+
+
+
+# password branch
+
+this branch work as a hardware token. For more secure password generate a super long password and program it on the hardware so whenever you need to type the password you plug in the hardware and it types the password for you.
